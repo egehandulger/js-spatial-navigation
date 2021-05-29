@@ -32,19 +32,18 @@
     restrict: 'self-first', // 'self-first', 'self-only', 'none'
     tabIndexIgnoreList:
       'a, input, select, textarea, button, iframe, [contentEditable=true]',
-    navigableFilter: null
+    navigableFilter: null,
+    keyMapping: {
+      '37': 'left',
+      '38': 'up',
+      '39': 'right',
+      '40': 'down'
+    }
   };
 
   /*********************/
   /* Constant Variable */
   /*********************/
-  var KEYMAPPING = {
-    '37': 'left',
-    '38': 'up',
-    '39': 'right',
-    '40': 'down'
-  };
-
   var REVERSE = {
     'left': 'right',
     'up': 'down',
@@ -853,7 +852,7 @@
       return false;
     };
 
-    var direction = KEYMAPPING[evt.keyCode];
+    var direction = GlobalConfig.keyMapping[evt.keyCode];
     if (!direction) {
       if (evt.keyCode == 13) {
         currentFocusedElement = getCurrentFocusedElement();
