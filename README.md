@@ -194,7 +194,13 @@ Following is an example with default values.
   leaveFor: null,
   restrict: 'self-first',
   tabIndexIgnoreList: 'a, input, select, textarea, button, iframe, [contentEditable=true]',
-  navigableFilter: null
+  navigableFilter: null,
+  keyMapping: {
+    '37': 'left',
+    '38': 'up',
+    '39': 'right',
+    '40': 'down'
+  }
 }
 ```
 
@@ -292,6 +298,20 @@ Elements matching `tabIndexIgnoreList` will never be affected by [`makeFocusable
 A callback function that accepts a DOM element as the first argument.
 
 SpatialNavigation calls this function every time when it tries to traverse every single candidate. You can ignore arbitrary elements by returning `false`.
+
+#### `keyMapping`
+
+  + Type: Object
+  + Default: `{
+    '37': 'left',
+    '38': 'up',
+    '39': 'right',
+    '40': 'down'
+  }`
+
+An object defining which keys to be used for navigation. Arrow keys are defined by default.
+
+**Note:** This configuration can only be defined for the global scope. The definition of different key mappings within sections are going to be ignored.
 
 ### Custom Attributes
 
