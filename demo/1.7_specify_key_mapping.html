@@ -13,15 +13,19 @@
         // Initialize
         SpatialNavigation.init();
 
+        // Define the key mapping.
+        SpatialNavigation.set({
+          keyMapping: {
+            a: 'left',
+            w: 'up',
+            d: 'right',
+            s: 'down'
+          }
+        });
+
         // Define the navigable elements.
         SpatialNavigation.add({
-          selector: '.focusable',
-          keyMapping: {
-            '65': 'left',
-            '87': 'up',
-            '68': 'right',
-            '83': 'down'
-          }
+          selector: '.focusable'
         });
 
         // Add 'tabindex="-1"' to "currently-existing" navigable elements. It's

@@ -34,10 +34,10 @@
       'a, input, select, textarea, button, iframe, [contentEditable=true]',
     navigableFilter: null,
     keyMapping: {
-      '37': 'left',
-      '38': 'up',
-      '39': 'right',
-      '40': 'down'
+      'ArrowLeft': 'left',
+      'ArrowUp': 'up',
+      'ArrowRight': 'right',
+      'ArrowDown': 'down'
     }
   };
 
@@ -852,9 +852,9 @@
       return false;
     };
 
-    var direction = GlobalConfig.keyMapping[evt.keyCode];
+    var direction = GlobalConfig.keyMapping[evt.key || evt.keyCode];
     if (!direction) {
-      if (evt.keyCode == 13) {
+      if (evt.key == 'Enter' || evt.keyCode == 13) {
         currentFocusedElement = getCurrentFocusedElement();
         if (currentFocusedElement && getSectionId(currentFocusedElement)) {
           if (!fireEvent(currentFocusedElement, 'enter-down')) {
@@ -899,7 +899,7 @@
     if (evt.altKey || evt.ctrlKey || evt.metaKey || evt.shiftKey) {
       return
     }
-    if (!_pause && _sectionCount && evt.keyCode == 13) {
+    if (!_pause && _sectionCount && (evt.key == 'Enter' || evt.keyCode == 13)) {
       var currentFocusedElement = getCurrentFocusedElement();
       if (currentFocusedElement && getSectionId(currentFocusedElement)) {
         if (!fireEvent(currentFocusedElement, 'enter-up')) {

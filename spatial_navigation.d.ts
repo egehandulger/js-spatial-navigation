@@ -1,13 +1,8 @@
 declare namespace SpatialNavigation {
-  enum Direction {
-    left = 'left',
-    up = 'up',
-    right = 'right',
-    down = 'down'
-  }
+  type Direction = 'left' | 'up' | 'right' | 'down'
 
   type LeaveFor = {
-    [key in keyof typeof Direction]?: Selector
+    [key in Direction]?: Selector
   }
 
   type Selector = string | Element[] | Element | NodeList | Node | `@${string}`
