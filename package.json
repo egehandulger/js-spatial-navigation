@@ -1,6 +1,6 @@
 {
   "name": "js-spatial-navigation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/egehandulger/js-spatial-navigation",
   "author": "Egehan Dülger",
   "repository": {
@@ -12,6 +12,7 @@
   },
   "description": "A javascript-based implementation of Spatial Navigation.",
   "main": "spatial_navigation.js",
+  "types": "spatial_navigation.d.ts",
   "keywords": [
     "spatial",
     "navigation"
