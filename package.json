@@ -12,6 +12,7 @@
   },
   "description": "A javascript-based implementation of Spatial Navigation.",
   "main": "spatial_navigation.js",
+  "types": "spatial_navigation.d.ts",
   "keywords": [
     "spatial",
     "navigation"
