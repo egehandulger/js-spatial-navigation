@@ -20,7 +20,7 @@ Examples
 
 ```html
 <head>
-  <script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script>
+  <script src="https://egehandulger.github.io/js-spatial-navigation/spatial_navigation.js"></script>
   <script>
     window.addEventListener('load', function() {
       // Initialize
@@ -60,7 +60,7 @@ Although SpatialNavigation is a standalone (pure-javascript-based) library, it c
 ```html
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script>
-  $.getScript('https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js', function() {
+  $.getScript('https://egehandulger.github.io/js-spatial-navigation/spatial_navigation.js', function() {
     $('a, .focusable')
       .SpatialNavigation()
       .focus(function() { $(this).css('outline', '2px solid red'); })
@@ -73,7 +73,7 @@ Although SpatialNavigation is a standalone (pure-javascript-based) library, it c
 
 ### More Demonstrations
 
-+ [Demonstrations](https://luke-chang.github.io/js-spatial-navigation/demo/)
++ [Demonstrations](https://egehandulger.github.io/js-spatial-navigation/demo/)
 
 Documentation
 -------------
@@ -446,4 +446,4 @@ Chrome 5, Firefox 12, IE 9, Opera 11.5, Safari 5
 License
 -------
 
-Copyright (c) 2017 Luke Chang. Licensed under the MPL 2.0.
+Licensed under the MPL 2.0.
