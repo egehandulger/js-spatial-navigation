@@ -852,7 +852,8 @@
       return false;
     };
 
-    var direction = GlobalConfig.keyMapping[evt.key || evt.keyCode];
+    var direction = GlobalConfig.keyMapping[evt.key] ||
+        GlobalConfig.keyMapping[evt.keyCode];
     if (!direction) {
       if (evt.key == 'Enter' || evt.keyCode == 13) {
         currentFocusedElement = getCurrentFocusedElement();
